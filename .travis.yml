@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+script:
+  - npm ci
+  - npm build
+deploy:
+  provider: surge
+  domain: plansoft-microfrontends-demo.surge.sh
+  skip_cleanup: true
